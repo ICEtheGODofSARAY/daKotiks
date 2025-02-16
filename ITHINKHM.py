@@ -1,15 +1,16 @@
+import os
+
 import requests
 import random
 
+a = os.listdir(r'C:\Users\user\PycharmProjects\openWeatherAPI\the kots')
+
 
 def unique_path_generator():
-    chisla = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-    base_path = r"C:\Users\user\PycharmProjects\openWeatherAPI\the kots\kot"
     unique_number = ''
-    for _ in range(1, 100):
-        unique_number += str(random.choice(chisla))
-    full_path = base_path + str(unique_number) + '.jpg'
-    return full_path
+    for _ in range(99):
+        unique_number += str(random.randint(0, 9))
+    return r"C:\Users\user\PycharmProjects\openWeatherAPI\the kots\kot" + unique_number + '.jpg'
 
 
 user_limit = int(input())
